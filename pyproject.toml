@@ -9,6 +9,15 @@ readme = "README.md"
 python = "^3.10"
 pandas = "^2.2.3"
 matplotlib = "^3.10.0"
+black = {extras = ["jupyter"], version = "^24.10.0"}
+flake8 = "^7.1.1"
+mypy = "^1.14.1"
+isort = "^5.13.2"
+flake8-isort = "^6.1.1"
+flake8-black = "^0.3.6"
+flake8-bugbear = "^24.12.12"
+flake8-polyfill = "^1.0.2"
+ipykernel = "^6.29.5"
 
 
 [build-system]
