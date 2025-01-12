@@ -21,6 +21,7 @@ ipykernel = "^6.29.5"
 plotly = "^5.24.1"
 nbformat = "^5.10.4"
 scikit-learn = "^1.6.1"
+nbconvert = "^7.16.5"
 
 
 [build-system]
