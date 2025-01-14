@@ -5,7 +5,9 @@ from pathlib import Path
 
 
 df = pd.read_csv(Path(__file__).parent.parent / "data" / "user-item-interactions.csv")
-df_content = pd.read_csv(Path(__file__).parent.parent / "data" / "articles_community.csv")
+df_content = pd.read_csv(
+    Path(__file__).parent.parent / "data" / "articles_community.csv"
+)
 del df["Unnamed: 0"]
 del df_content["Unnamed: 0"]
 
@@ -42,7 +44,9 @@ def sol_2_test(top_articles: Callable) -> None:
 
     checks = ["top_5", "top_10", "top_20"]
     for file_name in checks:
-        if set(eval(file_name)) == set(pickle.load(open(Path(__file__).parent / "data" / f"{file_name}.p", "rb"))):
+        if set(eval(file_name)) == set(
+            pickle.load(open(Path(__file__).parent / "data" / f"{file_name}.p", "rb"))
+        ):
             print(f"Your {file_name} looks like the solution list! Nice job.")
         else:
             print(
@@ -60,7 +64,7 @@ def sol_5_test(sol_5_dict: dict) -> None:
 
     else:
         for k, v in sol_5_dict_1.items():
-            if set(sol_5_dict[k]) != set(sol_5_dict_1[k]):
+            if sol_5_dict[k] != sol_5_dict_1[k]:
                 print(
                     "Oops!  Looks like there is a mistake with the {} key in your dictionary.  The answer should be {}.  Try again.".format(
                         k, v
